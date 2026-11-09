@@ -28,3 +28,23 @@ jobs:
       - run: python -m pip install -r ml/requirements.txt
       - run: python -m unittest ml.test_pipeline
       - run: python -m ml.smoke --output .qa/ci-smoke
+  ios:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx cap sync ios
+      # Simulator target, code signing disabled: confirms the Xcode project builds
+      # cleanly in CI without needing an Apple Developer account. Real device
+      # archiving/signing/TestFlight submission is a separate step once that
+      # account and a signing approach (fastlane match / Codemagic) are set up.
+      - name: Build iOS app (simulator, unsigned)
+        run: |
+          cd ios/App
+          xcodebuild -workspace App.xcworkspace -scheme App \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug build \
+            CODE_SIGNING_ALLOWED=NO
