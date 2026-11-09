@@ -44,7 +44,7 @@ jobs:
       - name: Build iOS app (simulator, unsigned)
         run: |
           cd ios/App
-          xcodebuild -workspace App.xcworkspace -scheme App \
+          xcodebuild -project App.xcodeproj -scheme App \
             -destination 'generic/platform=iOS Simulator' \
             -configuration Debug build \
             CODE_SIGNING_ALLOWED=NO
