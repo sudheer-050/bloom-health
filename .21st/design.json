@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "project": {
+    "name": "bloom-health",
+    "productType": "Personal wellness journal",
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python standard library"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "dist/design.css",
+      "dist/landing.css"
+    ],
+    "components": [
+      "dist/index.html",
+      "dist/app.js",
+      "dist/accounts.js",
+      "dist/photo-meal.js",
+      "dist/icons.js",
+      "dist/local-model.js",
+      "dist/landing.js"
+    ],
+    "assets": [
+      "dist/assets/bloom-active-friends-cutout.png"
+    ],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "primary": "#dfe6d7",
+      "background": "#f6f7f2",
+      "text": "#20281f",
+      "surface": "#ffffff",
+      "green": "#364b2e",
+      "blue": "#b1c0aa",
+      "peach": "#b8c2b0",
+      "lavender": "#bac3b3"
+    },
+    "typography": {
+      "body": "Segoe UI, system-ui, sans-serif",
+      "display": "Bahnschrift, Segoe UI, sans-serif"
+    },
+    "spacing": {},
+    "radius": {
+      "card": "18px"
+    },
+    "shadows": {},
+    "motion": {},
+    "density": "comfortable"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [
+      "Native semantic HTML",
+      "Native dialog",
+      "Local SVG icons"
+    ],
+    "patterns": [
+      "21st health-stat-card 8617: stat hierarchy and rounded chart bars",
+      "21st dashboard-sidebar 14941: grouped navigation and profile footer",
+      "21st sign-in-3 39096: split sign-in and labeled fields",
+      "21st Hero with Product Mockup 4710, vaib215: headline, CTA and contextual product preview adapted to native HTML/CSS with muted sage colors."
+    ]
+  },
+  "constraints": {
+    "must": [
+      "Preserve existing local journals and encrypted accounts",
+      "Guest option below Sign in",
+      "Background-free fitness image on login",
+      "Login and signup fit viewport without scrolling",
+      "All seven routes responsive",
+      "Online AI optional; manual nutrition works locally"
+    ],
+    "avoid": [
+      "Fake health metrics",
+      "Unrequested cloud journal uploads",
+      "Remote fonts",
+      "Additional framework dependencies"
+    ]
+  },
+  "decisions": [
+    "Bloom Daily: lime accents, charcoal sidebar, warm white cards, local typography. Retrieved 21st catalog code adapted to vanilla HTML/CSS/JS. Hosted AI generation disabled on this account.",
+    "Optional local food-model review reuses Bloom card tokens; uncertain predictions require explicit review. Photos are exported for training only by explicit user action.",
+    "2026-11-08: user found homepage too colorful. Replace bright lime and mixed accent hues with a restrained sage/neutral palette, including login. Keep layouts and functionality.",
+    "2026-11-08: advertising-style product homepage before login. Preserve muted palette, labeled examples, fixed-height login and existing guest/account storage flows."
+  ],
+  "evidence": [],
+  "generatedAt": "2026-11-07T22:14:56.118Z"
+}

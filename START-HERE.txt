@@ -1,0 +1,23 @@
+BLOOM - START HERE
+
+1. Extract this ZIP completely. Do not run from inside the ZIP.
+2. On Windows, install Python 3.10 or newer if needed, with the python command available.
+3. Double-click Open Bloom.cmd in this folder.
+4. Keep that window open. Visit http://localhost:4317 in your browser.
+5. On the homepage, choose Try as a guest, Sign in, or Start your journey.
+
+Your journal is saved in your browser, not in this folder. Back it up using Backup.
+Your friend's copy has its own data. This package contains no personal journal or API key.
+The localhost address works on the computer running the app; it is not a public sharing URL.
+
+Read Bloom-Complete-Guide.pdf for the complete application, privacy and sharing guide.
+Read USER-GUIDE.md for backups and optional online photo analysis.
+Read ML-PROJECT.md for optional local model training and evaluation.
+
+Online photo analysis needs your own OpenAI API key and may incur API charges.
+Manual food entry works without an API key or ML installation.
+The ML pipeline is included, but a real-food model is not trained or bundled yet.
+
+Snapshot: 08 November 2026. Share package 7 includes the advertising-style muted sage homepage.
+The included PDF describes the package 6 feature snapshot. Core features remain;
+package 7 adds a public product homepage before login.

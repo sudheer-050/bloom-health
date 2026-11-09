@@ -1,0 +1,30 @@
+name: Bloom checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  journal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node check-vault.cjs
+      - run: node check-nutrition.cjs
+      - run: python -m unittest test_server.py
+  ml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -r ml/requirements.txt
+      - run: python -m unittest ml.test_pipeline
+      - run: python -m ml.smoke --output .qa/ci-smoke

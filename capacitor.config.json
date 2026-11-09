@@ -1,0 +1,8 @@
+{
+  "appId": "com.sudheerkumargandiboyana.bloom",
+  "appName": "Bloom",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": true
+  }
+}

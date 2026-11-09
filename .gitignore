@@ -1,0 +1,17 @@
+.openai/*.tar.gz
+*.tar.gz
+node_modules/
+preview-*.jpg
+.qa/
+.sources/
+__pycache__/
+*.pyc
+*.bloom
+.env
+ml/data/
+ml/runs/
+ml/models/
+ml/mlruns/
+ml/mlflow.db
+ml/.venv/
+*.bloom-review.json
